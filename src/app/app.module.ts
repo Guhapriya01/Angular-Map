@@ -7,23 +7,21 @@ import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent
-  ],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     RouterModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCbw1T0_T-ebwiPm0IIRPLidzhzLr1yt7k'
-    })
+      apiKey: 'AIzaSyCbw1T0_T-ebwiPm0IIRPLidzhzLr1yt7k',
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
